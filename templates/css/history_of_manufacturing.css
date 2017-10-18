@@ -1,0 +1,144 @@
+/*++++++++++++++++++++++++++++++++
+==================================
+ Template Name : SmartSign VMA 01
+ Author Name : Lauren Griffith
+ Version : 1.0
+==================================
+++++++++++++++++++++++++++++++++*/
+
+
+/*
+=====================
+---------------------
+	1. Typography
+	2. pageName
+	3. pageTitle
+	4. pageSummary
+	5. pageVideo
+---------------------
+=====================
+*/
+
+
+/*=====================
+====== Typography =====
+=======================*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+   text-align: center;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	position: relative;
+	font-weight:400;
+	background: #F5F5F5;
+	color: #004a7c;
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'PT Sans', sans-serif;
+}
+
+/*=======================
+====== pageName CSS =====
+=========================*/
+
+#pageName {
+	visibility: hidden;
+}
+
+#pageName p {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 0.1em;
+	font-weight: 400;
+}
+
+/*========================
+====== pageTitle CSS =====
+==========================*/
+
+#pageTitle {
+	display: block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+#pageTitle h1 {
+	font-size: 3em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+ .title:after {
+	color: #fece02;
+	content: "||";
+	position: relative;
+	right: -1%;
+	top: -4px;
+}
+
+.title:before {
+	color: #fece02;
+	content: "||";
+	left: -1%;
+	position: relative;
+	top: -4px;
+}
+
+/*==========================
+====== pageSummary CSS =====
+============================*/
+
+#pageSummary {
+	display: block;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+}
+
+#pageTitle h2 {
+	font-size: 2em;
+	font-weight: 400;
+}
+
+/*========================
+====== pageVideo CSS =====
+==========================*/
+
+#pageVideo {
+	display: block;
+}
+
+#pageVideo h4 {
+	font-size: 1.2em;
+	font-weight: 700;
+	color: #F5F5F5;
+	text-shadow: 0.2px 0.2px #fece02;
+	text-decoration: underline;
+	text-decoration-style: double;
+	text-decoration-color: #fece02;
+}
+
+.video {
+	padding-top: 40px;
+    padding-bottom: 40px;
+    background: #004a7c;
+}
+
+.video-class {
+	margin: 0 auto;
+	border: 10px outset #fece02;
+}
