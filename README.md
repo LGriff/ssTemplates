@@ -5,4 +5,4 @@ All each of you are doing is to create a new template file (or as many as you li
 
 Here's the latest live templates folder.  Please use this as a guide.  Note the 'history' template from Lauren was recently included.  Use that as a guide, then feel free to do what you like.  Note the folder structure for any additional CSS includes from her history template.
 
-https://smartsigntechnology.com/ss-viewer.html?from=Smart%20Sign%20Interactive&locationName=smartsign&GPS=true&Video=true&pageName=VMA
+https://smartsigntechnology.com/ss-viewer.html?from=Smart%20Sign%20Interactive&locationName=SS2&GPS=false&Video=false
