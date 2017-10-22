@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <title>Smart Sign Interactive, Inc.</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+<style>
+
+
+* {
+ cursor:none;
+}
+
+img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    width:10%;
+    height:10%;
+    overflow:hidden;
+}
+
+
+
+</style>
+
+</head>
+    <br />{{id}}
+    <br />{{pageName}}
+    <br />{{pageImage}}
+    <br />{{pageLocation}}
+    <br />{{pageTags}}
+    <br />{{pageSortOrder}}
+    <br />{{pageType}}
+    <br />{{pageTiming}}
+    <br />{{pageURL}}
+    <br />{{pageHTML}}
+    <br />{{pageControl}}
+    <br />{{pagePortraitImage}}
+    <br />{{pageRunTimes}}
+    <br />{{pageOwnerId}}
+    <br />{{pagePrivacy}}
+    <br />{{pageStatus}}
+    <br />{{pageTitle}}
+    <br />{{pageSummary}}
+    <br />{{pageDetails}}
+    <br />{{pagePrice}}
+    <br />{{pageEventDate}}
+    <br />{{pageEventTime}}
+    <br />{{pageEventLocation}}
+
+
+
+<table>
+<tr>
+<td>
+[[page
+
+
+<script>
+
+        $(document).ready(function(){
+           //$('#theImage').fadeOut(1000).fadeIn(3000).fadeOut(3000);
+          // $('#theImage').animate({height:800},300);
+        });
+
+    </script>
+
+
+<img id="theImage" src="{{pageImage}}" />
+
+  <p id="thePageName" ss-info="{{pageTiming}}" style="position:absolute;left:0;bottom:0;color:white;font:12pt verdana bold;background-color:red;">{{pageName}}</p>
+
+  <p id="thePagePin" style="display:none;position:absolute;right:0;bottom:0;color:white;text-align:right;font:24pt verdana bold;background-color:black;color:white;">{{accessPinCode}}</p>
+
+<script>
+
+ $('#thePageName').fadeIn(250).delay(1500).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
+ //$('#thePagePin').fadeIn(250).delay(2000).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
+
+</script>
+
+</html>

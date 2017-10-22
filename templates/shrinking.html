@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <title>Smart Sign Interactive, Inc.</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+<style>
+
+* {
+ cursor:none;
+ background-color:black;
+ color:white;
+
+}
+
+/* Source: http://snipplr.com/view/10979/css-cross-browser-word-wrap */
+
+.wordwrap {
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}
+
+#message {
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
+.shrink:hover
+{
+        -webkit-transform: scale(0.58);
+        -ms-transform: scale(0.58);
+        transform: scale(0.58);
+		   transition: width 2s, height 4s;
+}
+
+</style>
+
+</head>
+
+<script>
+
+        $(document).ready(function(){
+	
+            $('#message').fadeOut(0).delay(150).fadeIn(4500).delay(1000).fadeOut(13000);
+			
+			$('#theframe').delay(3000).animate({
+            left: '+=200px',
+            right: '+=200px',
+            top: '+=100px',
+			bottom: '+=200px'
+        },7000);
+         
+        });
+
+    </script>
+	
+
+
+<body>
+
+<div id="theframe" style="text-align:center;font:5vw verdana;position:absolute;left:0;top:0;right:0;bottom:0;">
+	<div id="message" class="wordwrap" style="left:0;top:0;right:0;bottom:0;position:absolute;">
+{{pageName}}<br />{{pageTitle}}
+
+	<div style="font:4vw Times New Roman;">{{pageDetails}}</div></div>
+</div>
+
+</body>
+
+</html>

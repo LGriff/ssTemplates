@@ -1,0 +1,154 @@
+/*++++++++++++++++++++++++++++++++
+==================================
+ Template Name : SmartSign VMA 02
+ Author Name : Lauren Griffith
+ Version : 1.0
+==================================
+++++++++++++++++++++++++++++++++*/
+
+
+/*
+=====================
+---------------------
+	1. Typography
+	2. pageName
+	3. pageTitle
+	4. pageImage
+	5. pageSummary
+	6. pageDetails
+---------------------
+=====================
+*/
+
+
+/*=====================
+====== Typography =====
+=======================*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+   text-align: center;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	position: relative;
+	font-weight:400;
+/*	background: #F5F5F5; */
+	color: #004a7c;
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'PT Sans', sans-serif;
+}
+
+/*=======================
+====== pageName CSS =====
+=========================*/
+
+#pageName {
+	visibility: hidden;
+}
+
+#pageName p {
+	font-size: 0.1em;
+	font-weight: 400;
+}
+
+/*========================
+====== pageTitle CSS =====
+==========================*/
+
+#pageTitle {
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#pageTitle h1 {
+	font-size: 3em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+ .title:after {
+	color: #fece02;
+	content: "||";
+	position: relative;
+	right: -1%;
+	top: -4px;
+}
+
+.title:before {
+	color: #fece02;
+	content: "||";
+	left: -1%;
+	position: relative;
+	top: -4px;
+}
+
+/*========================
+====== pageImage CSS =====
+==========================*/
+
+#pageImage {
+}
+
+/*==========================
+====== pageSummary CSS =====
+============================*/
+
+#pageSummary {
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	text-shadow: 0.5px 0.5px #F5F5F5;
+}
+
+#pageSummary h2 {
+	font-size: 1.5em;
+	font-weight: 700;
+	background: rgba(254,206,2,1);
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+/*==========================
+====== pageDetails CSS =====
+============================*/
+
+#pageDetails {
+	display: inline-block;
+    column-count: 2;
+    column-gap: 200px;
+    column-rule: 10px double #fece02;
+    background: #004a7c;
+    color: #F5F5F5;
+    text-shadow: 0.2px 0.2px #fece02;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#pageDetails h4 {
+	font-size: 1.18em;
+	font-weight: 700;
+	padding: 12px;
+    margin: 0px;
+}
+
+body {
+	background-color:white;
+}
