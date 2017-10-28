@@ -5,7 +5,6 @@
 <head>
 
     <title>Smart Sign Interactive, Inc.</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"
@@ -17,6 +16,7 @@
  cursor:none;
  background-color:black;
  color:white;
+    overflow:hidden;
 
 }
 
@@ -56,23 +56,21 @@
 			$('#theframe').delay(3000).animate({
             left: '+=200px',
             right: '+=200px',
-            top: '+=100px',
+            top: '+=50px',
 			bottom: '+=200px'
         },7000);
          
         });
 
     </script>
-	
-
 
 <body>
 
-<div id="theframe" style="text-align:center;font:5vw verdana;position:absolute;left:0;top:0;right:0;bottom:0;">
-	<div id="message" class="wordwrap" style="left:0;top:0;right:0;bottom:0;position:absolute;">
-{{pageName}}<br />{{pageTitle}}
-
-	<div style="font:4vw Times New Roman;">{{pageDetails}}</div></div>
+<div id="theframe" style="text-align:center;position:absolute;left:0;top:0;right:0;bottom:0;">
+	<div id="message" class="wordwrap" style="left:0;top:0;right:0;bottom:0;position:absolute;font: 5vw verdana;">
+{{pageTitle}}<br />{{pageSummary}}
+	<div style="font:4vw Times New Roman;">{{pageDetails}}</div>
+    </div>
 </div>
 
 </body>

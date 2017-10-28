@@ -11,50 +11,69 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"
             integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
-<style>
+    <style>
 
-* {
- cursor:none;
-}
+        * {
+            cursor: none;
+            overflow: hidden;
+        }
 
-img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    right:0px;
-    bottom:0px;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
+        #theImage {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
 
-</style>
+            cursor: none;
+
+        }
+
+    </style>
 
 </head>
 
 <script>
 
-        $(document).ready(function(){
+    $(document).ready(function () {
 
-           // $('#theImage').fadeOut(5).fadeIn(5).fadeOut(15).fadeIn(15);
+        // $('#theImage').fadeOut(5).fadeIn(5).fadeOut(15).fadeIn(15);
 
-           // $('#theImage').animate( {height:768}, 300 );
-        });
+        // $('#theImage').animate( {height:768}, 300 );
 
-    </script>
+        //$('#thePageTitle').animate({fontSize: "9em"}, 6000).animate({fontSize: "6em"}, 4000);
 
-<img id="theImage" src="{{pageImage}}" />
+        //$('#thePagePin').fadeIn(250).delay(2000).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
 
-  <p id="thePageName" ss-info="{{pageTiming}}" style="position:absolute;left:0;bottom:0;color:white;font:12pt verdana bold;background-color:red;">{{pageName}}</p>
+        // $('#thePageTitle').delay(0).fadeIn(250).delay(1500).fadeOut(0); // note  **** see p id=thePageName  display hidden above
 
-  <p id="thePagePin" style="display:none;position:absolute;right:0;bottom:0;color:white;text-align:right;font:24pt verdana bold;background-color:black;color:white;">{{accessPinCode}}</p>
+        $('#thePageTitle').fadeIn(0).delay(666);
 
-<script>
-
- $('#thePageName').fadeIn(250).delay(1500).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
-
- //$('#thePagePin').fadeIn(250).delay(2000).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
+        $('#thePageTitle').animate({
+            top: "1080px",
+            "height": window.innerHeight - 2 - 20,
+            opacity: "0.95"
+        }, 500).fadeOut(1550);
+    });
 
 </script>
+
+<div id='iframeWrapper' style="display:none;">
+    {{pageVideo}}
+</div>
+
+<img id="theImage" src="{{pageImage}}"/>
+
+<!--<p id="thePageName" ss-info="{{pageTiming}}" style="position:absolute;left:0;bottom:0;color:white;font:12pt verdana bold;background-color:red;">{{pageName}}</p>-->
+
+<div id="thePageTitle" ss-info="{{pageTiming}}"
+     style="display:none;position:absolute;left:0%;top:0%;bottom:0;right:0%;color:white;font:18px verdana bold;background-color:black;">
+    <img style="width:100%" src="img/ss.png"/></div>
+
+<!--<p id="thePagePin" style="display:none;position:absolute;right:0;bottom:0;color:white;text-align:right;font:24pt verdana bold;background-color:black;color:white;">{{accessPinCode}}</p>-->
+
 
 </html>

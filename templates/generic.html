@@ -11,81 +11,99 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"
             integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
-<style>
+    <style>
 
+        * {
+            cursor: none;
+        }
 
-* {
- cursor:none;
-}
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+            /*width:95%;*/
+            /*height:95%;*/
+            font-size: 2em;
+            cursor: none;
+        }
 
-img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    right:0px;
-    bottom:0px;
-    width:10%;
-    height:10%;
-    overflow:hidden;
-}
-
-
-
-</style>
+    </style>
 
 </head>
-    <br />{{id}}
-    <br />{{pageName}}
-    <br />{{pageImage}}
-    <br />{{pageLocation}}
-    <br />{{pageTags}}
-    <br />{{pageSortOrder}}
-    <br />{{pageType}}
-    <br />{{pageTiming}}
-    <br />{{pageURL}}
-    <br />{{pageHTML}}
-    <br />{{pageControl}}
-    <br />{{pagePortraitImage}}
-    <br />{{pageRunTimes}}
-    <br />{{pageOwnerId}}
-    <br />{{pagePrivacy}}
-    <br />{{pageStatus}}
-    <br />{{pageTitle}}
-    <br />{{pageSummary}}
-    <br />{{pageDetails}}
-    <br />{{pagePrice}}
-    <br />{{pageEventDate}}
-    <br />{{pageEventTime}}
-    <br />{{pageEventLocation}}
+
+<div id="stuff" style="display:none;">
+    <br/>{{id}}
+    <br/>{{pageName}}
+    <br/>{{pageImage}}
+    <br/>{{pageLocation}}
+    <br/>{{pageTags}}
+    <br/>{{pageSortOrder}}
+    <br/>{{pageType}}
+    <br/>{{pageTiming}}
+    <br/>{{pageURL}}
+    <p style="display:none;">{{pageHTML}}</p>
+    <p style="display:none;">{{pageVideo}}</p>
+    <br/>{{pageControl}}
+    <br/>{{pagePortraitImage}}
+    <br/>{{pageRunTimes}}
+    <br/>{{pageOwnerId}}
+    <br/>{{pagePrivacy}}
+    <br/>{{pageStatus}}
+    <br/>{{pageTitle}}
+    <br/>{{pageSummary}}
+    <br/>{{pageDetails}}
+    <br/>{{pagePrice}}
+    <br/>{{pageEventDate}}
+    <br/>{{pageEventTime}}
+    <br/>{{pageEventLocation}}
+</div>
 
 
+<img id="theImage" src="{{pageImage}}"/>
 
-<table>
-<tr>
-<td>
-[[page
+<p id="thePageTitle"
+   style="line-height:80px;display:none;position:absolute;right:0;top:100px;color:gold;background-color:transparent;">
+    {{pageTitle}}</p>
+
+<p id="thePageName" ss-info="{{pageTiming}}"
+   style="position:absolute;left:0;bottom:0;color:gold;font:12pt verdana bold;background-color:transparent;">
+    {{pageName}}</p>
+
+<!--<p id="thePagePin" style="display:none;position:absolute;right:0;bottom:0;color:white;text-align:right;font:24pt verdana bold;background-color:black;color:white;">{{accessPinCode}}</p>-->
+
+<img id="connecttome" src="img/ss.png" style="position:absolute;left:100px;top:100px;border:2px solid gold;"/>
 
 
 <script>
 
-        $(document).ready(function(){
-           //$('#theImage').fadeOut(1000).fadeIn(3000).fadeOut(3000);
-          // $('#theImage').animate({height:800},300);
-        });
+    $(document).ready(function () {
 
-    </script>
+        $('#connecttome').delay(2500).fadeOut(750);
 
+        $('#theImage').attr("width", window.innerWidth - 2);
+        $('#theImage').attr("height", window.innerHeight - 2);
 
-<img id="theImage" src="{{pageImage}}" />
+        //$('#theImage').fadeOut(1000).fadeIn(3000).fadeOut(3000);
 
-  <p id="thePageName" ss-info="{{pageTiming}}" style="position:absolute;left:0;bottom:0;color:white;font:12pt verdana bold;background-color:red;">{{pageName}}</p>
+        $('#theImage').animate({top: "10px", "height": window.innerHeight - 2 - 20, opacity: "0.95"}, "slow");
 
-  <p id="thePagePin" style="display:none;position:absolute;right:0;bottom:0;color:white;text-align:right;font:24pt verdana bold;background-color:black;color:white;">{{accessPinCode}}</p>
+        $('#thePageName').animate({fontSize: "9em"}, 6000).animate({fontSize: "1em"}, 2000);
+
+        $('#thePageTitle').delay(1000).fadeIn(2000).animate({fontSize: "8em"}, 6000);
+
+        $("#stuff").delay(1000).fadeOut(3000);
+
+    });
+
+</script>
+
 
 <script>
 
- $('#thePageName').fadeIn(250).delay(1500).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
- //$('#thePagePin').fadeIn(250).delay(2000).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
+    $('#thePageName').fadeIn(250).delay(1500).fadeOut(1500); // note  **** see p id=thePageName  display hidden above
 
 </script>
 
